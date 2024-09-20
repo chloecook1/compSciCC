@@ -67,11 +67,11 @@ public class ProblemSet0 {
 
         // check all columns
         for (int i = 0; i < size; i++) {
-            int colSum = 0;
+            int cols = 0;
             for (int j = 0; j < size; j++) {
-                colSum += square[j][i];
+                cols += square[j][i];
             }
-            if (colSum != sum){
+            if (cols != sum){
                 return false;
             } 
         }
@@ -101,14 +101,14 @@ public class ProblemSet0 {
         int medianInd = (array.length/2)+1;
         //count
         int count = 0;
-        int median = 0;
+        int med = 0; //median var
         for(int i = 0; i < bucket.length; i++){
             count+=bucket[i];
             if(count == medianInd){
-                median = i;
+                med = i;
                 break;
             }
         }
-        return median;
+        return med;
     }
 }
